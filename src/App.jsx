@@ -154,6 +154,97 @@ function App() {
           </div>
         </section>
 
+        {/* ================= RSVP SECTION ================= */}
+        <section className="flex justify-center">
+          <div className="w-full max-w-md">
+            <form action="https://submit-form.com/NgpVUH4tB" method="POST" className="space-y-4 max-w-md mx-auto p-6 bg-[#FCFBF7] border border-[#D4AF37] rounded-lg shadow-md relative overflow-hidden">
+              {/* Decorative top bar */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-brand-maroon"></div>
+              
+              <div className="text-center pb-2">
+                <h2 className="text-xl font-serif font-bold text-brand-maroon">
+                  RSVP — Graduation Celebration
+                </h2>
+                <p className="text-xs text-gray-500 mt-0.5">
+                  Please respond to help us coordinate details.
+                </p>
+              </div>
+
+              <input type="hidden" name="_next" value="https://celebrating-arushi.vercel.app" />
+
+              {/* Guest Name */}
+              <div>
+                <label htmlFor="guest_name" className="block text-xs font-bold uppercase text-gray-600 tracking-wider mb-1">
+                  Guest Name
+                </label>
+                <input
+                  type="text"
+                  id="guest_name"
+                  name="guest_name"
+                  required
+                  placeholder="Enter your full name"
+                  className="w-full text-sm border border-brand-gold/30 rounded-md px-3 py-2 bg-brand-bg/50 focus:outline-none focus:ring-1 focus:ring-brand-gold focus:bg-white transition"
+                />
+              </div>
+
+              {/* Attendance & Guest Count Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Attendance */}
+                <div>
+                  <label htmlFor="attending" className="block text-xs font-bold uppercase text-gray-600 tracking-wider mb-1">
+                    Attendance
+                  </label>
+                  <select
+                    id="attending"
+                    name="attending"
+                    className="w-full text-sm border border-brand-gold/30 rounded-md px-3 py-2 bg-brand-bg/50 focus:outline-none focus:ring-1 focus:ring-brand-gold focus:bg-white transition"
+                  >
+                    <option value="Yes, wouldn't miss it!">Yes, wouldn't miss it!</option>
+                    <option value="No, sending love from afar">No, sending love from afar</option>
+                  </select>
+                </div>
+
+                {/* Total Guest Count */}
+                <div>
+                  <label htmlFor="total_guests" className="block text-xs font-bold uppercase text-gray-600 tracking-wider mb-1">
+                    Total Guest Count
+                  </label>
+                  <input
+                    type="number"
+                    id="total_guests"
+                    name="total_guests"
+                    min="1"
+                    defaultValue="1"
+                    className="w-full text-sm border border-brand-gold/30 rounded-md px-3 py-2 bg-brand-bg/50 focus:outline-none focus:ring-1 focus:ring-brand-gold focus:bg-white transition"
+                  />
+                </div>
+              </div>
+
+              {/* Dietary Restrictions */}
+              <div>
+                <label htmlFor="notes" className="block text-xs font-bold uppercase text-gray-600 tracking-wider mb-1">
+                  Dietary Restrictions / Notes
+                </label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  rows="2"
+                  placeholder="Any allergies or special requests?"
+                  className="w-full text-sm border border-brand-gold/30 rounded-md px-3 py-2 bg-brand-bg/50 focus:outline-none focus:ring-1 focus:ring-brand-gold focus:bg-white transition resize-none"
+                />
+              </div>
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                className="w-full bg-brand-maroon text-white font-semibold py-2 px-4 rounded-md text-sm hover:bg-brand-maroon/90 border border-transparent active:scale-[0.99] transition cursor-pointer"
+              >
+                Submit RSVP
+              </button>
+            </form>
+          </div>
+        </section>
+
         {/* ================= EVENING PROGRAM TIMELINE ================= */}
         <section className="bg-white border border-brand-gold/40 rounded-xl p-6 shadow-sm">
           <div className="border-b border-brand-gold/20 pb-3 mb-6">
